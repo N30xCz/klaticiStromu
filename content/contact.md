@@ -13,5 +13,5 @@ Tom
 | Středa    | 8:30am - 5:00pm |
 | Čtvrtek   | 8:30am - 5:00pm |
 | Pátek     | 10:am - 4:00pm  |
-| Sobota    | Zavřeno          |
-| Nedele    | Zavřeno          |
+| Sobota    | Neklatim         |
+| Nedele    | Neklatim          |
