@@ -1,5 +1,4 @@
 name: Deploy Hugo site to Pages
-
 on:
   push:
     branches: ["main"]
@@ -22,12 +21,12 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.121.0'  # Changed from 'latest' to specific version
           extended: true
-      
+     
       - name: Build
         run: hugo --minify
-        
+       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
