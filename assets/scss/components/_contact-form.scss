@@ -1,0 +1,163 @@
+.contact-form {
+    &__inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+ 
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+ 
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: $black;
+      font-family: $font-family-base;
+    }
+ 
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid lighten($grey, 35%);
+      border-radius: 3px;
+      background-color: $white;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      font-family: $font-family-base;
+     
+      &:focus {
+        outline: none;
+        border-color: $primary;
+        box-shadow: 0 0 0 3px rgba($primary, 0.1);
+        background-color: $white;
+      }
+
+      &.error {
+        border-color: #dc3545;
+        
+        &:focus {
+          box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+        }
+      }
+    }
+ 
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+ 
+    .file-upload {
+      position: relative;
+ 
+      &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+ 
+      &__label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+        background-color: $white-offset;
+        border: 1px dashed $grey;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-family: $font-family-base;
+ 
+        &:hover {
+          background-color: $white;
+          border-color: $primary;
+        }
+ 
+        svg {
+          width: 20px;
+          height: 20px;
+          stroke: $grey;
+        }
+      }
+
+      &__info {
+        font-size: 0.875rem;
+        color: $grey;
+        margin-top: 0.5rem;
+        font-family: $font-family-base;
+      }
+
+      &__preview {
+        margin-top: 0.5rem;
+      }
+
+      &__file {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+        background-color: $white-offset;
+        border-radius: 3px;
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      &__filename {
+        color: $black;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+      }
+
+      &__filesize {
+        color: $grey;
+        margin-left: 1rem;
+      }
+    }
+ 
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      font-weight: 500;
+      color: $white;
+      background-color: $primary;
+      border: none;
+      border-radius: 3px;
+      transition: background-color 0.2s;
+      cursor: pointer;
+      font-family: $font-family-base;
+ 
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+    }
+ 
+    .hidden {
+      display: none;
+    }
+
+    .form-error {
+      color: #dc3545;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+      display: block;
+      font-family: $font-family-base;
+    }
+ 
+    @include media-breakpoint-up(md) {
+      &__inner {
+        padding: 2rem 0;
+      }
+ 
+      .form-group {
+        margin-bottom: 2rem;
+      }
+    }
+  }

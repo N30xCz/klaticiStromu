@@ -1,5 +1,5 @@
-// Any variables that need to use Hugo configuration need to be declared here
-// Colors
+/* stylelint-disable */
+// Hugo template variables
 $primary: {{ .Site.Params.colors.primary | default "#f24088" }};
 $black: {{ .Site.Params.colors.black | default "#2f2f41" }};
 $white: {{ .Site.Params.colors.white | default "#ffffff" }};
@@ -9,7 +9,7 @@ $grey: {{ .Site.Params.colors.grey | default "#5C5A5A" }};
 // Fonts
 $font-family-base: {{ .Site.Params.fonts.base }}, Helvetica, Arial, sans-serif, -apple-system;
 $font-family-heading: {{ .Site.Params.fonts.heading }}, serif, -apple-system;
-
+/* stylelint-enable */
 
 // Variables - Override Bootstrap variables and set your own here
 @import 'variables';
@@ -42,6 +42,7 @@ $font-family-heading: {{ .Site.Params.fonts.heading }}, serif, -apple-system;
 @import 'components/strip';
 @import 'components/feature';
 @import 'components/social';
+@import 'components/contact-form';
 
 // Pages
 @import 'pages/home';
