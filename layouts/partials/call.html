@@ -1,0 +1,46 @@
+<!-- call.html -->
+<div class="call-container">
+  <!-- First Contact Box -->
+  <div class="call">
+    <div class="call-box-top">
+      {{ if .site.Data.contact.member1 }}
+          <div class="call-name"><strong>{{ .site.Data.contact.member1 }}</strong></div>
+      {{ end }}
+      {{ if .site.Data.contact.phone1 }}
+          <div class="call-phone"><strong>Telefon: </strong> {{ .site.Data.contact.phone1 }} </div>
+      {{ end }}
+      {{ if .site.Data.contact.email1 }}
+      <div class="call-email"><strong>Email: </strong>
+        <a href="mailto:{{ .site.Data.contact.email1 }}">
+          {{ .site.Data.contact.email1 }}
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Second Contact Box -->
+  <div class="call">
+    <div class="call-box-top">
+      {{ if .site.Data.contact.member2 }}
+          <div class="call-name"><strong>{{ .site.Data.contact.member2 }}</strong></div>
+      {{ end }}
+      {{ if .site.Data.contact.phone2 }}
+          <div class="call-phone"><strong>Telefon: </strong> {{ .site.Data.contact.phone2 }} </div>
+      {{ end }}
+      {{ if .site.Data.contact.email2 }}
+      <div class="call-email"><strong>Email: </strong>
+        <a href="mailto:{{ .site.Data.contact.email2 }}">
+          {{ .site.Data.contact.email2 }}
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ if eq .show_button "true" }}
+    <div class="call-box-bottom">
+      <a href="{{ .site.Data.contact.contact_button_link | relURL }}" class="button">Contact</a>
+    </div>
+  {{ end }}
+</div>
