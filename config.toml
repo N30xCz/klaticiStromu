@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://n30xcz.github.io/klaticiStromu/"
 themesDir = "themes"
 theme = "hugo-serif-theme"
 languageCode = "cz"
